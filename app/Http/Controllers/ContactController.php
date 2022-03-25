@@ -8,6 +8,11 @@ use App\Http\Requests\UpdateContactRequest;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("my");
+    }
+
     /**
      * Display a listing of the resource.
      *
